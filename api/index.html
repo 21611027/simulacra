@@ -265,6 +265,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#simulacra.ProductPopularitySimulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ProductPopularitySimulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulacra.ProductPopularitySimulation.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulacra.ProductPopularitySimulation.run_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_simulation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -308,6 +335,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#simulacra.ProductPopularitySimulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ProductPopularitySimulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulacra.ProductPopularitySimulation.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulacra.ProductPopularitySimulation.run_simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_simulation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -325,11 +379,569 @@
 
 <h1 id="api-documentation">API Documentation</h1>
 <h2 id="product-popularity-simulation-class">Product Popularity Simulation Class</h2>
-<p>```{eval-rst}
-.. autoclass:: path.to.module.ProductPopularitySimulation
-   :members:
-   :undoc-members:
-   :show-inheritance:</p>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="simulacra.ProductPopularitySimulation"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>A simulation class to model the dynamics of product popularity over time,
+incorporating factors like natural growth, marketing impact, and promotional campaigns.</p>
+
+
+
+  <p><span class="doc-section-title">Attributes:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.start_demand">start_demand</span></code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Initial demand for the product.</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.days">days</span></code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Duration of the simulation in days.</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.growth_rate">growth_rate</span></code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Natural growth rate of product demand.</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.marketing_impact">marketing_impact</span></code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Impact of ongoing marketing efforts on demand.</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.promotion_day">promotion_day</span></code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Day on which a major marketing campaign starts (default is None).</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.promotion_effectiveness">promotion_effectiveness</span></code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Effectiveness of the marketing campaign.</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code><span title="simulacra.ProductPopularitySimulation.random_seed">random_seed</span></code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The seed for the random number generator to ensure reproducibility (default is None).</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><span class="doc-section-title">Methods:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="simulacra.ProductPopularitySimulation.run_simulation" href="#simulacra.ProductPopularitySimulation.run_simulation">run_simulation</a></code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Runs the simulation and returns a list of demand values over time.</p>
+              </div>
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+            <details class="quote">
+              <summary>Source code in <code>simulacra/product_popularity_simulation.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ProductPopularitySimulation</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A simulation class to model the dynamics of product popularity over time,</span>
+<span class="sd">    incorporating factors like natural growth, marketing impact, and promotional campaigns.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        start_demand (int): Initial demand for the product.</span>
+<span class="sd">        days (int): Duration of the simulation in days.</span>
+<span class="sd">        growth_rate (float): Natural growth rate of product demand.</span>
+<span class="sd">        marketing_impact (float): Impact of ongoing marketing efforts on demand.</span>
+<span class="sd">        promotion_day (Optional[int]): Day on which a major marketing campaign starts (default is None).</span>
+<span class="sd">        promotion_effectiveness (float): Effectiveness of the marketing campaign.</span>
+<span class="sd">        random_seed (Optional[int]): The seed for the random number generator to ensure reproducibility (default is None).</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        run_simulation(): Runs the simulation and returns a list of demand values over time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">start_demand</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">days</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">growth_rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">marketing_impact</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">promotion_day</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">promotion_effectiveness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">random_seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the ProductPopularitySimulation with all necessary parameters.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            start_demand (int): The initial level of demand for the product.</span>
+<span class="sd">            days (int): The total number of days to simulate.</span>
+<span class="sd">            growth_rate (float): The natural daily growth rate of demand, as a decimal.</span>
+<span class="sd">            marketing_impact (float): Daily impact of marketing on demand, as a decimal.</span>
+<span class="sd">            promotion_day (Optional[int]): The specific day on which a promotional event occurs (defaults to None).</span>
+<span class="sd">            promotion_effectiveness (float): Multiplicative impact of the promotion on demand.</span>
+<span class="sd">            random_seed (Optional[int]): Seed for the random number generator to ensure reproducible results (defaults to None).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_demand</span> <span class="o">=</span> <span class="n">start_demand</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">days</span> <span class="o">=</span> <span class="n">days</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span> <span class="o">=</span> <span class="n">growth_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marketing_impact</span> <span class="o">=</span> <span class="n">marketing_impact</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">promotion_day</span> <span class="o">=</span> <span class="n">promotion_day</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">promotion_effectiveness</span> <span class="o">=</span> <span class="n">promotion_effectiveness</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="o">=</span> <span class="n">random_seed</span>
+
+    <span class="k">def</span> <span class="nf">run_simulation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Simulates the demand for a product over a specified number of days based on the initial settings.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[int]: A list containing the demand for the product for each day of the simulation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span><span class="p">)</span>
+
+        <span class="n">demand</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">start_demand</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">days</span><span class="p">):</span>
+            <span class="n">previous_demand</span> <span class="o">=</span> <span class="n">demand</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">natural_growth</span> <span class="o">=</span> <span class="n">previous_demand</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span><span class="p">)</span>
+            <span class="n">marketing_influence</span> <span class="o">=</span> <span class="n">previous_demand</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">marketing_impact</span>
+
+            <span class="n">new_demand</span> <span class="o">=</span> <span class="n">natural_growth</span> <span class="o">+</span> <span class="n">marketing_influence</span>
+
+            <span class="k">if</span> <span class="n">day</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion_day</span><span class="p">:</span>
+                <span class="n">new_demand</span> <span class="o">=</span> <span class="p">(</span><span class="n">natural_growth</span> <span class="o">+</span> <span class="n">marketing_influence</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion_effectiveness</span><span class="p">)</span>
+
+            <span class="n">demand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_demand</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">demand</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="simulacra.ProductPopularitySimulation.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">start_demand</span><span class="p">,</span> <span class="n">days</span><span class="p">,</span> <span class="n">growth_rate</span><span class="p">,</span> <span class="n">marketing_impact</span><span class="p">,</span> <span class="n">promotion_day</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">promotion_effectiveness</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initializes the ProductPopularitySimulation with all necessary parameters.</p>
+
+
+
+  <p><span class="doc-section-title">Parameters:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td><code>start_demand</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The initial level of demand for the product.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>days</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The total number of days to simulate.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>growth_rate</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The natural daily growth rate of demand, as a decimal.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>marketing_impact</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Daily impact of marketing on demand, as a decimal.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>promotion_day</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The specific day on which a promotional event occurs (defaults to None).</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>promotion_effectiveness</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Multiplicative impact of the promotion on demand.</p>
+            </div>
+          </td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+        <tr class="doc-section-item">
+          <td><code>random_seed</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Seed for the random number generator to ensure reproducible results (defaults to None).</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>simulacra/product_popularity_simulation.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">start_demand</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">days</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">growth_rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">marketing_impact</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">promotion_day</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">promotion_effectiveness</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">random_seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initializes the ProductPopularitySimulation with all necessary parameters.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        start_demand (int): The initial level of demand for the product.</span>
+<span class="sd">        days (int): The total number of days to simulate.</span>
+<span class="sd">        growth_rate (float): The natural daily growth rate of demand, as a decimal.</span>
+<span class="sd">        marketing_impact (float): Daily impact of marketing on demand, as a decimal.</span>
+<span class="sd">        promotion_day (Optional[int]): The specific day on which a promotional event occurs (defaults to None).</span>
+<span class="sd">        promotion_effectiveness (float): Multiplicative impact of the promotion on demand.</span>
+<span class="sd">        random_seed (Optional[int]): Seed for the random number generator to ensure reproducible results (defaults to None).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">start_demand</span> <span class="o">=</span> <span class="n">start_demand</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">days</span> <span class="o">=</span> <span class="n">days</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span> <span class="o">=</span> <span class="n">growth_rate</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">marketing_impact</span> <span class="o">=</span> <span class="n">marketing_impact</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">promotion_day</span> <span class="o">=</span> <span class="n">promotion_day</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">promotion_effectiveness</span> <span class="o">=</span> <span class="n">promotion_effectiveness</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="o">=</span> <span class="n">random_seed</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="simulacra.ProductPopularitySimulation.run_simulation" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">run_simulation</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Simulates the demand for a product over a specified number of days based on the initial settings.</p>
+
+
+
+  <p><span class="doc-section-title">Returns:</span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="doc-section-item">
+          <td>
+                <code><span title="typing.List">List</span>[float]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>List[int]: A list containing the demand for the product for each day of the simulation.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>simulacra/product_popularity_simulation.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">run_simulation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Simulates the demand for a product over a specified number of days based on the initial settings.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[int]: A list containing the demand for the product for each day of the simulation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_seed</span><span class="p">)</span>
+
+    <span class="n">demand</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">start_demand</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">days</span><span class="p">):</span>
+        <span class="n">previous_demand</span> <span class="o">=</span> <span class="n">demand</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">natural_growth</span> <span class="o">=</span> <span class="n">previous_demand</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">growth_rate</span><span class="p">)</span>
+        <span class="n">marketing_influence</span> <span class="o">=</span> <span class="n">previous_demand</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">marketing_impact</span>
+
+        <span class="n">new_demand</span> <span class="o">=</span> <span class="n">natural_growth</span> <span class="o">+</span> <span class="n">marketing_influence</span>
+
+        <span class="k">if</span> <span class="n">day</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion_day</span><span class="p">:</span>
+            <span class="n">new_demand</span> <span class="o">=</span> <span class="p">(</span><span class="n">natural_growth</span> <span class="o">+</span> <span class="n">marketing_influence</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">promotion_effectiveness</span><span class="p">)</span>
+
+        <span class="n">demand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_demand</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">demand</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+
+</div>
 
 
 
