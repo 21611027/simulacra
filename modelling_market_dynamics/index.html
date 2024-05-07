@@ -20,7 +20,7 @@
     
     
       
-        <title>MOdelling Market Dynamics - Simulacra Documentation</title>
+        <title>Modelling Market Dynamics - Simulacra Documentation</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MOdelling Market Dynamics
+              Modelling Market Dynamics
             
           </span>
         </div>
@@ -246,7 +246,7 @@
           
   
   <span class="md-ellipsis">
-    MOdelling Market Dynamics
+    Modelling Market Dynamics
   </span>
   
 
@@ -257,7 +257,7 @@
         
   
   <span class="md-ellipsis">
-    MOdelling Market Dynamics
+    Modelling Market Dynamics
   </span>
   
 
@@ -769,19 +769,19 @@
 <ol>
 <li>
 <p><strong>Volatility and Drift:</strong> Each day, the price of the resource changes based on a combination of volatility and drift. The volatility represents the day-to-day variability in price changes, while the drift represents a consistent trend in price changes over time. This is modeled using a normal distribution where the mean of the distribution is given by the <code>drift</code> and the standard deviation by the <code>volatility</code>. This is expressed as:
-   [
+   $$
    \text{Random Change} = \text{Normal}(\text{Drift}, \text{Volatility})
-   ]
+   $$
    Then, the new price is calculated as:
-   [
+   $$
    \text{New Price} = \text{Previous Price} \times (1 + \text{Random Change})
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Supply Disruption:</strong> If there's a day specified for a supply disruption (given by <code>supply_disruption_day</code>), the formula adjusts the price of the resource significantly based on the <code>disruption_severity</code>. The severity is modeled as a multiplicative factor to the price of the resource:
-   [
+   $$
    \text{New Price} = \text{Previous Price} \times (1 + \text{Disruption Severity})
-   ]</p>
+   $$</p>
 </li>
 </ol>
 <h3 id="relation-to-classical-models_1">Relation to Classical Models</h3>
@@ -801,26 +801,26 @@
 <ol>
 <li>
 <p><strong>Volatility and Drift:</strong> Similar to the Resource Fluctuations Simulation, the stock price changes are driven by daily volatility and drift. Each day, the stock price undergoes a random change determined by a normal distribution centered around the <code>drift</code> (which can be positive or negative to represent an overall upward or downward trend) and spread according to the <code>volatility</code> (which accounts for the unpredictability or risk associated with the stock). This is mathematically modeled as:
-   [
+   $$
    \text{Random Change} = \text{Normal}(\text{Drift}, \text{Volatility})
-   ]
+   $$
    The new price for each day is then calculated as:
-   [
+   $$
    \text{New Price} = \text{Previous Price} \times (1 + \text{Random Change})
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Market Event Impact:</strong> If there is a significant market event planned for a specific day (<code>event_day</code>), the stock price is adjusted to reflect the impact of this event using the <code>event_impact</code>, which is applied as a multiplicative factor. This adjusts the price in response to the event:
-   [
+   $$
    \text{New Price} = \text{Previous Price} \times (1 + \text{Event Impact})
-   ]</p>
+   $$</p>
 </li>
 </ol>
 <h3 id="relation-to-classical-models_2">Relation to Classical Models</h3>
 <p>The simulation model described in the <code>StockMarketSimulation</code> class aligns closely with the principles of the <strong>Geometric Brownian Motion (GBM)</strong> model used in financial mathematics to model the prices of financial instruments like stocks and commodities:</p>
 <ul>
 <li>
-<p><strong>Geometric Brownian Motion:</strong> The use of a random change modeled with a normal distribution where the stock price is updated by multiplying the previous price by <span class="arithmatex">\(1 + \text{Random Change}\)</span> is characteristic of GBM. In GBM, prices are assumed to follow a log-normal distribution, ensuring that they remain positive and reflect realistic financial scenarios where prices are multiplicative.</p>
+<p><strong>Geometric Brownian Motion:</strong> The use of a random change modeled with a normal distribution where the stock price is updated by multiplying the previous price by <span class="arithmatex">\(<span class="arithmatex">\((1 + \text{Random Change}\)\)</span>\)</span> is characteristic of GBM. In GBM, prices are assumed to follow a log-normal distribution, ensuring that they remain positive and reflect realistic financial scenarios where prices are multiplicative.</p>
 </li>
 <li>
 <p><strong>Event Modeling:</strong> The handling of specific market events by applying a multiplicative impact on the stock price for a particular day resembles a <strong>jump-diffusion model</strong>. This type of model is often used to incorporate sudden, significant changes in price due to external factors (such as corporate news, geopolitical events, etc.), which aren’t captured by the standard GBM.</p>
