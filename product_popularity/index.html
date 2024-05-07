@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../getting_started/">
+        <link rel="prev" href="../modelling_market_dynamics/">
       
       
         <link rel="next" href="../stock_market/">
@@ -230,6 +230,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelling_market_dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MOdelling Market Dynamics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -242,10 +262,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -256,8 +276,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Simulations
           </label>
@@ -394,26 +414,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-formulation" class="md-nav__link">
+  <a href="#model-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Model Formulation
+      Model Description
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Model Formulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#relation-to-classical-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relation to Classical Models
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -640,26 +645,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-formulation" class="md-nav__link">
+  <a href="#model-description" class="md-nav__link">
     <span class="md-ellipsis">
-      Model Formulation
+      Model Description
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Model Formulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#relation-to-classical-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relation to Classical Models
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -757,39 +747,12 @@ plt.show()
 <p>How does the cost of a strategy relate to its effectiveness in boosting demand?</p>
 </li>
 </ul>
-<h2 id="model-formulation">Model Formulation</h2>
-<p>The formula used in the <code>ProductPopularitySimulation</code> class for simulating product demand appears to incorporate several key factors: natural growth, marketing impact, and promotional campaigns. Here's a breakdown of how the formula works for each day of the simulation:</p>
-<ol>
-<li>
-<p><strong>Natural Growth:</strong> The natural growth of the product's demand is modeled as a simple exponential growth, which is a common model in population dynamics and economics. Each day, the demand increases by a percentage defined by the <code>growth_rate</code> attribute. The formula for this part is:
-   [
-   \text{Natural Growth} = \text{Previous Demand} \times (1 + \text{Growth Rate})
-   ]</p>
-</li>
-<li>
-<p><strong>Marketing Impact:</strong> On top of the natural growth, the formula also includes a daily impact from ongoing marketing efforts. This impact is additive and is calculated as a percentage of the previous day's demand, determined by the <code>marketing_impact</code> attribute:
-   [
-   \text{Marketing Influence} = \text{Previous Demand} \times \text{Marketing Impact}
-   ]</p>
-</li>
-<li>
-<p><strong>Promotional Campaign:</strong> If a promotional campaign occurs on a specific day (defined by <code>promotion_day</code>), the demand for that day is further increased by a factor of <code>promotion_effectiveness</code>. This is modeled as a multiplicative boost to the demand calculated from natural growth and marketing influence:
-   [
-   \text{New Demand} = (\text{Natural Growth} + \text{Marketing Influence}) \times (1 + \text{Promotion Effectiveness})
-   ]</p>
-</li>
-</ol>
-<p>The overall formula for days without a promotional campaign is:
-[
-\text{New Demand} = \text{Natural Growth} + \text{Marketing Influence}
-]</p>
-<p>For the day with the promotional campaign, the formula changes as mentioned above.</p>
-<h3 id="relation-to-classical-models">Relation to Classical Models</h3>
-<p>The model presented in the <code>ProductPopularitySimulation</code> class is not based directly on any classical single formula but instead combines concepts from various fields like marketing theory, economics, and systems dynamics:
-- The exponential growth model for natural increase is classical in many biological and economic models.
-- The impact of marketing as an additive factor is a straightforward approach often used in preliminary marketing models.
-- The multiplicative effect of a special promotion is also commonly used in models assessing the impact of irregular or one-time events on ongoing processes.</p>
-<p>The combination of these elements into a single model for simulating product demand helps in understanding how different factors interact over time to influence the market dynamics of a product. It's a practical approach that allows for adjustments and analysis of individual components like marketing strategies and promotional campaigns. This type of model can be very useful in academic settings or business analytics to forecast product demand under varying scenarios.</p>
+<h2 id="model-description">Model Description</h2>
+<p>The Product Popularity Simulation class models the demand for a product over time, considering factors such as natural growth, marketing impact, and promotional campaigns. The simulation formula includes:
+- Natural Growth: <span class="arithmatex">\( \text{Natural Growth} = \text{Previous Demand} \times (1 + \text{Growth Rate}) \)</span>
+- Marketing Influence: <span class="arithmatex">\( \text{Marketing Influence} = \text{Previous Demand} \times \text{Marketing Impact} \)</span>
+- Promotional Impact: On promotional days, the demand is further adjusted by a factor of <span class="arithmatex">\( \text{Promotion Effectiveness} \)</span>.</p>
+<p>See <a href="../modelling_market_dynamics/">Modelling Market Dynamics</a> for more information.</p>
 
 
 
