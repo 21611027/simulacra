@@ -733,29 +733,19 @@
 <h3 id="model-description">Model Description</h3>
 <p>The formula used in the <code>ProductPopularitySimulation</code> class for simulating product demand appears to incorporate several key factors: natural growth, marketing impact, and promotional campaigns. Here's a breakdown of how the formula works for each day of the simulation:</p>
 <ol>
-<li>
-<p><strong>Natural Growth:</strong> The natural growth of the product's demand is modeled as a simple exponential growth, which is a common model in population dynamics and economics. Each day, the demand increases by a percentage defined by the <code>growth_rate</code> attribute. The formula for this part is:
-   [
-   \text{Natural Growth} = \text{Previous Demand} \times (1 + \text{Growth Rate})
-   ]</p>
-</li>
-<li>
-<p><strong>Marketing Impact:</strong> On top of the natural growth, the formula also includes a daily impact from ongoing marketing efforts. This impact is additive and is calculated as a percentage of the previous day's demand, determined by the <code>marketing_impact</code> attribute:
-   [
-   \text{Marketing Influence} = \text{Previous Demand} \times \text{Marketing Impact}
-   ]</p>
-</li>
-<li>
-<p><strong>Promotional Campaign:</strong> If a promotional campaign occurs on a specific day (defined by <code>promotion_day</code>), the demand for that day is further increased by a factor of <code>promotion_effectiveness</code>. This is modeled as a multiplicative boost to the demand calculated from natural growth and marketing influence:
-   [
-   \text{New Demand} = (\text{Natural Growth} + \text{Marketing Influence}) \times (1 + \text{Promotion Effectiveness})
-   ]</p>
-</li>
+<li><strong>Natural Growth:</strong> The natural growth of the product's demand is modeled as a simple exponential growth, which is a common model in population dynamics and economics. Each day, the demand increases by a percentage defined by the <code>growth_rate</code> attribute. The formula for this part is:</li>
 </ol>
-<p>The overall formula for days without a promotional campaign is:
-[
-\text{New Demand} = \text{Natural Growth} + \text{Marketing Influence}
-]</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{Natural Growth} = \text{Previous Demand} \times (1 + \text{Growth Rate})\)</span>\)</span></p>
+<ol>
+<li><strong>Marketing Impact:</strong> On top of the natural growth, the formula also includes a daily impact from ongoing marketing efforts. This impact is additive and is calculated as a percentage of the previous day's demand, determined by the <code>marketing_impact</code> attribute:</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{Marketing Influence} = \text{Previous Demand} \times \text{Marketing Impact}\)</span>\)</span></p>
+<ol>
+<li><strong>Promotional Campaign:</strong> If a promotional campaign occurs on a specific day (defined by <code>promotion_day</code>), the demand for that day is further increased by a factor of <code>promotion_effectiveness</code>. This is modeled as a multiplicative boost to the demand calculated from natural growth and marketing influence:</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{New Demand} = (\text{Natural Growth} + \text{Marketing Influence}) \times (1 + \text{Promotion Effectiveness})\)</span>\)</span></p>
+<p>The overall formula for days without a promotional campaign is:</p>
+<div class="arithmatex">\[\text{New Demand} = \text{Natural Growth} + \text{Marketing Influence}\]</div>
 <p>For the day with the promotional campaign, the formula changes as mentioned above.</p>
 <h3 id="relation-to-classical-models">Relation to Classical Models</h3>
 <p>The model presented in the <code>ProductPopularitySimulation</code> class is not based directly on any classical single formula but instead combines concepts from various fields like marketing theory, economics, and systems dynamics:
@@ -767,23 +757,15 @@
 <h3 id="model-description_1">Model Description</h3>
 <p>The formula used in the <code>ResourceFluctuationsSimulation</code> class is designed to simulate the fluctuations in resource prices, incorporating daily volatility, a trend or drift over time, and the effects of supply disruptions. Here's a breakdown of how the formula works for each day of the simulation:</p>
 <ol>
-<li>
-<p><strong>Volatility and Drift:</strong> Each day, the price of the resource changes based on a combination of volatility and drift. The volatility represents the day-to-day variability in price changes, while the drift represents a consistent trend in price changes over time. This is modeled using a normal distribution where the mean of the distribution is given by the <code>drift</code> and the standard deviation by the <code>volatility</code>. This is expressed as:
-   $$
-   \text{Random Change} = \text{Normal}(\text{Drift}, \text{Volatility})
-   $$
-   Then, the new price is calculated as:
-   $$
-   \text{New Price} = \text{Previous Price} \times (1 + \text{Random Change})
-   $$</p>
-</li>
-<li>
-<p><strong>Supply Disruption:</strong> If there's a day specified for a supply disruption (given by <code>supply_disruption_day</code>), the formula adjusts the price of the resource significantly based on the <code>disruption_severity</code>. The severity is modeled as a multiplicative factor to the price of the resource:
-   $$
-   \text{New Price} = \text{Previous Price} \times (1 + \text{Disruption Severity})
-   $$</p>
-</li>
+<li><strong>Volatility and Drift:</strong> Each day, the price of the resource changes based on a combination of volatility and drift. The volatility represents the day-to-day variability in price changes, while the drift represents a consistent trend in price changes over time. This is modeled using a normal distribution where the mean of the distribution is given by the <code>drift</code> and the standard deviation by the <code>volatility</code>. This is expressed as:</li>
 </ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{Random Change} = \text{Normal}(\text{Drift}, \text{Volatility})\)</span>\)</span></p>
+<p>Then, the new price is calculated as:</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{New Price} = \text{Previous Price} \times (1 + \text{Random Change})\)</span>\)</span></p>
+<ol>
+<li><strong>Supply Disruption:</strong> If there's a day specified for a supply disruption (given by <code>supply_disruption_day</code>), the formula adjusts the price of the resource significantly based on the <code>disruption_severity</code>. The severity is modeled as a multiplicative factor to the price of the resource:</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{New Price} = \text{Previous Price} \times (1 + \text{Disruption Severity})\)</span>\)</span></p>
 <h3 id="relation-to-classical-models_1">Relation to Classical Models</h3>
 <p>The simulation model appears to draw from the classical geometric Brownian motion (GBM) model, which is commonly used in financial mathematics to model stock prices and other financial assets. In GBM, the logarithm of the stock prices follows a Brownian motion (also known as a Wiener process) with drift and volatility, similar to the structure used in this resource simulation class:</p>
 <ul>
@@ -799,23 +781,15 @@
 <h3 id="model-description_2">Model Description</h3>
 <p>The formula used in the <code>StockMarketSimulation</code> class simulates stock price movements by incorporating volatility, a directional trend (drift), and the impact of specific market events. Here’s a detailed explanation of the components of the formula:</p>
 <ol>
-<li>
-<p><strong>Volatility and Drift:</strong> Similar to the Resource Fluctuations Simulation, the stock price changes are driven by daily volatility and drift. Each day, the stock price undergoes a random change determined by a normal distribution centered around the <code>drift</code> (which can be positive or negative to represent an overall upward or downward trend) and spread according to the <code>volatility</code> (which accounts for the unpredictability or risk associated with the stock). This is mathematically modeled as:
-   $$
-   \text{Random Change} = \text{Normal}(\text{Drift}, \text{Volatility})
-   $$
-   The new price for each day is then calculated as:
-   $$
-   \text{New Price} = \text{Previous Price} \times (1 + \text{Random Change})
-   $$</p>
-</li>
-<li>
-<p><strong>Market Event Impact:</strong> If there is a significant market event planned for a specific day (<code>event_day</code>), the stock price is adjusted to reflect the impact of this event using the <code>event_impact</code>, which is applied as a multiplicative factor. This adjusts the price in response to the event:
-   $$
-   \text{New Price} = \text{Previous Price} \times (1 + \text{Event Impact})
-   $$</p>
-</li>
+<li><strong>Volatility and Drift:</strong> Similar to the Resource Fluctuations Simulation, the stock price changes are driven by daily volatility and drift. Each day, the stock price undergoes a random change determined by a normal distribution centered around the <code>drift</code> (which can be positive or negative to represent an overall upward or downward trend) and spread according to the <code>volatility</code> (which accounts for the unpredictability or risk associated with the stock). This is mathematically modeled as:</li>
 </ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{Random Change} = \text{Normal}(\text{Drift}, \text{Volatility})\)</span>\)</span></p>
+<p>The new price for each day is then calculated as:</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{New Price} = \text{Previous Price} \times (1 + \text{Random Change})\)</span>\)</span></p>
+<ol>
+<li><strong>Market Event Impact:</strong> If there is a significant market event planned for a specific day (<code>event_day</code>), the stock price is adjusted to reflect the impact of this event using the <code>event_impact</code>, which is applied as a multiplicative factor. This adjusts the price in response to the event:</li>
+</ol>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\text{New Price} = \text{Previous Price} \times (1 + \text{Event Impact})\)</span>\)</span></p>
 <h3 id="relation-to-classical-models_2">Relation to Classical Models</h3>
 <p>The simulation model described in the <code>StockMarketSimulation</code> class aligns closely with the principles of the <strong>Geometric Brownian Motion (GBM)</strong> model used in financial mathematics to model the prices of financial instruments like stocks and commodities:</p>
 <ul>
